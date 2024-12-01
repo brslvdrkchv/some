@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Game</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');        body {
+            margin: 20px;
+            font-family: montserrat;
+        }
+        .player {
+            margin-bottom: 20px;
+        }
+
+        .player p {
+            margin: 0;
+        }
+        .cards {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 65px;
+            height: 45px;
+            font-size: 27px;
+            font-weight: light;
+            background-color: #e3e2e2;
+        }
+        .red {
+            size: 40px;
+            color: darkred;
+        }
+
+        .black {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="player">
+        <p>Player 1:</p>
+        <div class="cards">
+            <div class="card black">2&#9827;</div>
+            <div class="card red">9&#9829;</div>
+            <div class="card red">6&#9829;</div>
+            <div class="card red">A&#9830;</div>
+            <div class="card black">Q&#9824;</div>
+            <div class="card black">J&#9827;</div>
+        </div>
+    </div>
+    <div class="player">
+        <p>Player 2:</p>
+        <div class="cards">
+            <div class="card red">3&#9829;</div>
+            <div class="card black">A&#9830;</div>
+            <div class="card black">10&#9827;</div>
+            <div class="card red">K&#9830;</div>
+            <div class="card black">8&#9824;</div>
+            <div class="card red">3&#9829;</div>
+        </div>
+    </div>
+</body>
+</html>
