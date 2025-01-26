@@ -99,7 +99,8 @@ font-weight: 700;
 @keyframes pcolor {
 to {
 opacity: 1;
-margin: 5% 10%
+margin: 5% 10%;
+
 }
 }
 @keyframes hid {
