@@ -1,16 +1,413 @@
+@font-face {
+font-family: "Roboto";
+src: url(fonts/Roboto-Regular.ttf);
+}
+br {
+display: none;
+}
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background: #F5F5F5;
+font-family: 'Roboto';
+}
+header {
+position: relative;
+top: 0;
+background: #F5F5F5;
+height: 100px;
+width: 100%;
+}	
+header hr {
+margin: 0;
+display: block;
+height: 1px;
+position: relative;
+top: 100%;
+background: grey;
+}
+#mailicon {
+display: inline-block;
+width: 50px;
+margin: 25px 25px 25px 50px;
+float: left;
+}
+h1 {
+display: inline-block;
+font-weight: 500;
+font-size: 25px;
+position: absolute;
+top: calc(50% - 25px);
+left: 120px;
+}
+#accounticon {
+display: inline-block;
+width: 50px;
+float: right;
+margin: 25px 50px 25px 25px;
+}	
+header p {
+display: inline-block;
+font-weight: 500;
+font-size: 20px;
+vertical-align: center;
+position: absolute;
+top: calc(50% - 27px);
+right: 120px;
+}
+main {
+margin: 20px 40px;
+}
+.menu {
+display: inline-block;
+width: 19%;
+height: 100%;
+}
+.message {
+display: inline-block;
+width: 79%;
+height: 100%;
+float: right;
+}
+.col {
+margin-left: -45px;
+}
+main section .button {
+height: 60px;
+position: relative;
+}
+.button:hover {
+background: pink;
+}
+.littleicon {
+display: inline-block;
+width: 42px;
+margin: 9px 9px 9px 18px;
+}
+main section p {
+display: inline-block;
+position: absolute;
+font-size: 20px;
+margin-top: 20px;
+font-weight: 100;
+}
+.mes {
+display: flex;
+flex-direction: row;
+align-self: center;
+height: 48px;
+overflow: hidden;
+width: 100%;
+}
+.mes:hover {
+background: lightgray;
+}
+main section hr {
+margin: 0;
+display: block;
+height: 2px;
+background: lightgrey;
+}
+.hid {
+display: none;
+}
+@media (min-width: 550px) and (max-width: 600px) {
+.hid {
+display: inline-block;
+position: absolute;
+font-size: 20px;
+margin-top: 15px;
+font-weight: 100;
+}
+.tooLong {
+display: none;
+}
+}
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+.hid {
+display: inline-block;
+position: absolute;
+font-size: 20px;
+margin-top: 20px;
+font-weight: 100;
+}
+.tooLong {
+display: none;
+}
+}
+.star {
+margin: 12px 12px;
+width: 22px;
+height: 22px;
+}
+.sender {
+display: block;
+margin: 12px 60px;
+height: 22px;
+}
+.text {
+display: block;
+width: 40%;
+height: 22px;
+margin: 12px 260px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.preview {
+margin-left: 10px;
+color: rgba(0,0,0,0.5);
+}
+.date {
+height: 22px;
+margin: 12px;
+position:absolute;
+right: 50px;
+width: 70px;
+}
+.add {
+height: 22px;
+margin: 12px;
+position:absolute;
+right: 140px;
+}
+@media (min-width: 800px) and (max-width: 850px) {
+.add {
+margin-right: 0;
+right: 130px;
+}
+.date {
+right: 40px;
+}
+}
+@media (min-width: 800px) and (max-width: 1300px) {
+.preview {
+display: none;
+}
+.text {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+flex-grow: 1;
+}
+}
+@media (min-width: 550px) and (max-width: 799px) {
+	
+	header {
+	position: relative;
+	top: 0;
+	background: #F5F5F5;
+	height: 80px;
+	width: 100%;
+	}
+	#mailicon {
+	display: inline-block;
+	width: 40px;
+	margin: 20px 20px 20px 40px;
+	float: left;
+	}
+	h1 {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 20px;
+	position: absolute;
+	top: calc(50% - 20px);
+	left: 90px;
+	}
+	#accounticon {
+	display: inline-block;
+	width: 40px;
+	float: right;
+	margin: 20px 40px 20px 20px;
+	}
+	header p {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 18px;
+	vertical-align: center;
+	position: absolute;
+	top: calc(50% - 27px);
+	right: 90px;
+	}
+	.menu {
+	display: inline-block;
+	width: 30%;
+	}
+	main .menu .button {
+	height: 50px;
+	position: relative;
+	}
+	.littleicon {
+	display: inline-block;
+	width: 30px;
+	margin: 10px;
+	}
+	main section p {
+	display: inline-block;
+	position: absolute;
+	font-size: 20px;
+	margin-top: 15px;
+	font-weight: 100;
+	}
+	.message {
+	display: inline-block;
+	width: 68%;
+	height: 100%;
+	float: right;
+	}
+	.mes {
+	height: 100px;
+	overflow: hidden;
+	width: 100%;
+	}
+	.col {
+	margin-left: 5px;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	}
+	.sender {
+	display: inline-block;
+	margin: 10px 10px 5px 10px;
+	height: 20px;
+	}
+	.text {
+	display: inline-block;
+	height: 18px;
+	margin: 40px 10px 5px 10px;
+	width: 100%;
+	height: 50px;
+	flex-grow: 1;
+	}
+	.preview {
+	position: relative;
+	top: -20px;
+	left: -10px;
+	color: rgba(0,0,0,0.5);
+	}
+	br {
+	display: block;
+	}
+
+}
+@media (max-width: 549px) {
+main section p {
+display: none;
+}
+.button {
+display: flex;
+justify-content: center;
+}
+.littleicon {
+margin: auto;
+}
+header {
+	position: relative;
+	top: 0;
+	background: #F5F5F5;
+	height: 80px;
+	width: 100%;
+	}
+	#mailicon {
+	display: inline-block;
+	width: 40px;
+	margin: 20px 20px 20px 40px;
+	float: left;
+	}
+	h1 {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 20px;
+	position: absolute;
+	top: calc(50% - 20px);
+	left: 90px;
+	}
+	#accounticon {
+	display: inline-block;
+	width: 40px;
+	float: right;
+	margin: 20px 40px 20px 20px;
+	}
+	header p {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 14px;
+	vertical-align: center;
+	position: absolute;
+	top: calc(50% - 18px);
+	right: 90px;
+	}
+	.message {
+	display: inline-block;
+	width: 78%;
+	height: 100%;
+	float: right;
+	}
+	.mes {
+	height: 100px;
+	overflow: hidden;
+	width: 100%;
+	}
+	.col {
+	margin-left: 5px;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	}
+	.sender {
+	display: inline-block;
+	margin: 10px 10px 5px 10px;
+	font-size: 16px;
+	}
+	.text {
+	height: 16px;
+	display: inline-block;
+	height: 18px;
+	margin: 40px 10px 5px 10px;
+	width: 100%;
+	height: 50px;
+	font-size: 16px;
+	flex-grow: 1;
+	}
+	.preview {
+	height: 16px;
+	position: relative;
+	top: -12px;
+	left: -10px;
+	color: rgba(0,0,0,0.5);
+	}
+	br {
+	display: block;
+	}
+	.date {
+	font-size: 16px;
+	height: 16px;
+	display: block;
+	right: 30px;
+	}
+	.add {
+	width: 16px;
+	height: 16px;
+	right: 110px;
+	}	
+	.star {
+	width: 18px;
+	height: 18px;
+	margin-right: -8px;
+	}		
 }
 
-button {
-    padding: 15px 30px;
-    font-size: 18px;
-}
 
-img {
-    max-height: 100%;
-}
+
+
+
+
+
