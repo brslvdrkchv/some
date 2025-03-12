@@ -1,116 +1,457 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 3</title>
-    <link rel="stylesheet" href="styles.css">
-</head>	
+    <title>Exercise 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+
+        @font-face {
+            font-family: 'Metropolis Light';
+            src: url('Metropolis-Light.otf');
+            src: local('Metropolis Light'), local('Metropolis-Light'),
+                url('Metropolis-Light.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Metropolis ExLight';
+            src: url('Metropolis-ExtraLight.otf');
+            src: local('Metropolis ExLight'), local('Metropolis-ExLight'),
+                url('Metropolis-ExtraLight.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Metropolis Bold';
+            src: url('Metropolis-Bold.otf');
+            src: local('Metropolis Bold'), local('Metropolis-Bold'),
+                url('Metropolis-Bold.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Metropolis Regular';
+            src: url('Metropolis-Regular.otf');
+            src: local('Metropolis Regular'), local('Metropolis-Regular'),
+                url('Metropolis-Regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Metropolis Medium';
+            src: url('Metropolis-Medium.otf');
+            src: local('Metropolis Medium'), local('Metropolis-Medium'),
+                url('Metropolis-Medium.otf') format('opentype');
+        }
+        * {
+            outline: 1px solid red;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: 'Metropolis Regular', sans-serif;
+            color: white;
+            width: 100vw;
+            overflow-x: hidden;
+            white-space: nowrap;
+            
+        }
+        header {
+            height: 10vh;
+            margin: 0 80px;
+            padding: 20px 0;
+        }
+        header img {
+            height: 32px;
+        }
+        header div {
+            height: 16px;
+            width: 321px;
+            gap: 56px;
+        }
+        header div p {
+            color: white;
+            font-family: 'Metropolis ExLight', sans-serif;
+            font-size: 16px;
+        }
+        header div p:last-of-type {
+            font-family: 'Metropolis Medium', sans-serif;
+        }
+        section {
+            margin: 0 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: (100vh - 10%);
+            overflow: hidden;
+        }
+        section div {
+            height: 70%;
+            margin-top: -80px;
+            width: auto;
+            white-space: nowrap;
+        }
+        span {
+            font-size: 3vh;
+            line-height: 1.7;
+            white-space: wrap;
+        }
+        section img {
+            width: 40%;
+            margin-left: 0;
+        }
+        
+        section div p {
+            line-height: 1;
+            font-size: 5vh;
+        }
+        section:nth-of-type(2) div p {
+            line-height: 1;
+            font-size: 8vh;
+        }
+        b {
+            font-size: 8vh;
+            font-family: 'Metropolis Bold', sans-serif;
+        }
+        li span {
+            letter-spacing: -5px;
+            width: 30px;
+            margin-right: 20px;
+            font-family: 'Metropolis Regular', sans-serif;
+            font-size: 3vh;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 3vh;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .rect {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+        .phone {
+            margin: 40px 10px;
+            height: 80vh;
+        }
+        #ind {
+            margin: 5px;
+            width: auto;
+            height: 6px;
+            border-radius: 10px;  
+            background-color: #0E0E0E;     
+        }
+        .fix {
+            width: 295px;
+            position: absolute;
+            left: 80px;
+            bottom: 0;
+            margin: 20px 0;
+        }
+        .scroll {
+            position: absolute;
+            width: 100px;
+            bottom: 0px;
+            height: 20px;
+            margin: 80px 0;
+        }
+        .carousel-item {
+            overflow: hidden;
+        }
+        main {
+            height: calc(100vh - 10%);
+            overflow: hidden;
+        }
+        .slide, #Slider button {
+            height: 90vh;
+        }
+        .punc {
+            display: block;
+        }
+        hr {
+            border: none;
+            border-top: 3px dashed white;
+            margin: 0;
+            transform: scaleX(4);
+        }   
+        .grad {
+            height: 65vh;
+            width: calc(100vw - 160px);
+            background: linear-gradient(to bottom, #1C1C1C, #0E0E0E);
+        }
+    </style>
+</head>
 <body>
-<header>
-	<hr></hr>
-	<img id='mailicon' src='images/mail.png' alt='mailicon'>
-	<h1>MY MAIL</h1>
-	<p>user@mymail.com</p>
-	<img id='accounticon' src='images/account.png' alt='acconticon'>
-</header>
-<main> 
-	<section class='menu'>
-		<div class='button'>
-		<img class='littleicon' src='images/incom.png' alt='incomicon'><p class='tooLong'>Incoming</p><p class='hid'>IN</p>
-		</div>
-		<div class='button'>
-		<img class='littleicon' src='images/outcom.png' alt='outcomicon'><p class='tooLong'>Outcoming</p><p class='hid'>OUT</p>
-		</div>
-		<div class='button'>
-		<img class='littleicon' src='images/draft.png' alt='drafticon'><p>Drafts</p>
-		</div>
-		<div class='button'>
-		<img class='littleicon' src='images/spam.png' alt='spamicon'><p>Spam</p>
-		</div>
-	</section>
-	<section class='message'>
-		<div class='mes'>
-			<img class='star' src='images/star1.svg' alt='emptystar'>
-			<div class='col'>
-			<p class='sender'>me, Alex</p>
-			<p class='text'>Trip to South America<br></br><span class='preview'>dolor sit amet, consectetur adipiscing elit</span></p>
-			</div>
-			<img class='add' src='images/add.png'>
-			<p class='date'>12 apr.</p>
-			
-		</div>
-		<hr></hr>
-		<div class='mes'>
-		<img class='star' src='images/star1.svg' alt='emptystar'>
-		<div class='col'>
-		<p class='sender'>me, John</p>
-		<p class='text'>Santa Monica trip<br></br><span class='preview'>tempor incididunt ut labore et dolore magna aliqua</span></p>
-		</div>
-		<img class='add' src='images/add.png'>
-		<p class='date'>12 apr.</p>
-		</div>
-		<hr></hr>
-		<div class='mes'>
-		<img class='star' src='images/star1.svg' alt='emptystar'>
-		<div class='col'>
-		<p class='sender'>me, John, Alex</p>
-		<p class='text'>Birthday party<br></br><span class='preview'>20.04.2019</span></p>
-		</div>
-		
-		<p class='date'>11 apr.</p>
-		</div>
-		<hr></hr>
-		<div class='mes'>
-		<img class='star' src='images/star2.svg' alt='fullstar'>
-		<div class='col'>
-		<p class='sender'>Mari White</p>
-		<p class='text'>Report (march 2019)<br></br><span class='preview'></span></p>
-		</div>
-		<img class='add' src='images/add.png'>
-		<p class='date'>10 apr.</p>
-		</div>
-		<hr></hr>
-		<div class='mes'>
-		<img class='star' src='images/star1.svg' alt='emptystar'>
-		<div class='col'>
-		<p class='sender'>me, Elena</p>
-		<p class='text'>Lorem ipsum<br></br><span class='preview'>quis nostrud exercitation 1  ullamco laboris</span></p>
-		</div>
-		<img class='add' src='images/add.png'>
-		<p class='date'>10 apr.</p>
-		</div>
-		<hr></hr>
-		<div class='mes'>
-		<img class='star' src='images/star1.svg' alt='emptystar'>
-		<div class='col'>
-		<p class='sender'>Bill, John</p>
-		<p class='text'>Ut enim ad minim<br></br><span class='preview'>sunt in culpa qui officia deserunt mollit anim</span></p>
-		</div>
-		<p class='date'>5 apr.</p>
-		</div>
-		<hr></hr>
-		<div class='mes'>
-		<img class='star' src='images/star2.svg' alt='fullstar'>
-		<div class='col'>
-		<p class='sender'>Stive</p>
-		<p class='text'>Duis aute irure<br></br><span class='preview'></span></p>
-		</div>
-		<p class='date'>1 apr.</p>
-		</div>
-		<hr></hr>
-		<div class='mes'>
-		<img class='star' src='images/star2.svg' alt='fullstar'>
-		<div class='col'>
-		<p class='sender'>Mari White</p>
-		<p class='text'>Report (february 2019)<br></br><span class='preview'></span></p>
-		</div>
-		
-		<img class='add' src='images/add.png'>
-		<p class='date'>10 mar.</p>
-		</div>
-		<hr></hr>
-	</section>
+    <img class="rect" src="images/rect.svg" alt="rect">
+    <header id='home' class="d-flex align-items-center justify-content-between">
+    <img src="images/s.svg" alt="background">
+        <div class="d-flex flex-row justify-content-around">
+            <a style='color: white; text-decoration: none;' href="#about"><p">About</p></a>
+            <a style='color: white; text-decoration: none;' href="#contact"><p>Contact</p></a>
+            <a style='color: white; text-decoration: none;' href="#join"><p class="font-weight-bold">Join Waitlist!</p></a>
+        </div>
+    </header>
+
+<main style="height: 90vh;">
+    <div id="Slider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item  w-100 active">
+                <section class="d-flex justify-content-between">
+                    <div class="ms-0">
+                        <div class="d-flex flex-column bot">
+                            <img class='scroll' src="images/scroll.svg" alt="scroll">
+                        </div>
+                        <p>Banking and Blockchain Solutions<br></p>
+                        <p><b>for the Cannabis Industry</b></p>
+                        <span>Staack delivers empowering financial technology to cannabis<br> operators in the form of swift and transparent cash-flow logistics and<br> digital business management solutions from seed-to-sale.</span>
+                    </div>
+                    <img class="phone" src="images/phone1.svg" alt="phone">
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="d-flex justify-content-between">
+                    <div class="ms-0">
+                        <p><b>Digital Banking</b></p>
+                        <ul>
+                            <li><span style="display: inline-block;">——— </span> Checking and Savings</li>
+                            <li><span style="display: inline-block;">——— </span> Wire Transfers & ACH</li>
+                            <li><span style="display: inline-block;">——— </span> Staack Debit Card (FIAT and Crypto)</li>
+                            <li><span style="display: inline-block;">——— </span> KYC, Anti-Money-Laundering, and Advanced Fraud Protection</li>
+                        </ul>
+                    </div>
+                    <img class="phone" src="images/phone2.svg" alt="phone">
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="d-flex justify-content-between">
+                    <div class="ms-0">
+                        <p><b>On-and-Off</b></p>
+                        <p><b>Chain Solutions</b></p>
+                        <ul>
+                            <li><span style="display: inline-block;">——— </span> Integration with Metrc for Seed-to-Sale Tracking and Compliance</li>
+                            <li><span style="display: inline-block;">——— </span> Cash <-> FIAT <-> Crypto Conversion</li>
+                            <li><span style="display: inline-block;">——— </span> Multi-currency Crypto Wallet</li>
+                            <li><span style="display: inline-block;">——— </span> Transactionality in USD and multiple Stable and Crypto Currencies</li>
+                        </ul>
+                    </div>
+                    <img class="phone" src="images/phone3.svg" alt="phone">
+                </section>
+            </div>
+        </div>
+        <div class="carousel-indicators fix">
+            <img id='ind' src="images/active.svg" data-bs-target="#Slider" data-bs-slide-to="0" class="active">
+            <img id='ind' src="images/inactive.svg" data-bs-target="#Slider" data-bs-slide-to="1">
+            <img id='ind' src="images/inactive.svg" data-bs-target="#Slider" data-bs-slide-to="2">
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const indicators = document.querySelectorAll('.carousel-indicators img');
+            const carousel = document.querySelector('#Slider');
+            const carouselInstance = new bootstrap.Carousel(carousel, {
+            wrap: false
+            });
+
+            carousel.addEventListener('slide.bs.carousel', function(event) {
+            indicators.forEach((indicator, index) => {
+            if (index === event.to) {
+                indicator.src = 'images/active.svg';
+            } else {
+                indicator.src = 'images/inactive.svg';
+            }
+            });
+            });
+
+            carousel.addEventListener('wheel', function(event) {
+            event.preventDefault();
+            if (event.deltaY < 0) {
+            carouselInstance.prev();
+            } else {
+            carouselInstance.next();
+            }
+            });
+
+            carousel.addEventListener('slid.bs.carousel', function(event) {
+            if (event.to === indicators.length - 1) {
+                carousel.removeEventListener('wheel', preventScroll);
+            } else {
+                carousel.addEventListener('wheel', preventScroll);
+            }
+            });
+
+            
+            });
+        </script>
+    </div>
 </main>
-</body>
+<main style="height: 100vh;">
+    
+    <section class="d-flex justify-content-between">
+        <img class="phone" src="images/phone4.svg" alt="phone">
+        <div class="ms-0">
+            <p>Send Money and<br></p>
+            <p><b>Make payments</b> (peer-to-peer)</p>
+            <ul>
+                <li><span style="display: inline-block;">——— </span> Send money directly to other Staack Accounts with Nominal Fees</li>
+                <li><span style="display: inline-block;">——— </span> Send or receive payments instantly in FIAT or Crypto</li>
+                <li><span style="display: inline-block;">——— </span> Point-of-Banking & Payment Processing</li>
+            </ul>
+        </div>
+        
+    </section>
+</main>
+<div class='punc'>
+<hr></hr>
+<main style="height: 100vh;">
+    
+    <section class="d-flex justify-content-between">
+       
+        <div class="ms-0">
+            <p>Reach Financial Goals<br></p>
+            <p><b>by Staacking</b></p>
+            <ul>
+                <li><span style="display: inline-block;">——— </span> Staack helps with Business Budgeting: Savings, <br><span style="opacity: 0;">——— </span> inventory, tax, investment, and payroll</li>
+                <li><span style="display: inline-block;">——— </span> Use smart contracts for automatic asset allocation, <br><span style="opacity: 0;">——— </span> inventory management, and tax payments</li>
+                <li><span style="display: inline-block;">——— </span> Portfolio Management - make active and passive <br><span style="opacity: 0;">——— </span> investments in FIAT and/or Crypto</li>
+            </ul>
+        </div>
+        <img class="phone" src="images/phone5.svg" alt="phone">
+    </section>
+</main>
+<main style="height: 100vh;">
+    
+    <section class="d-flex justify-content-between">
+        <img class="phone left" src="images/phone6.svg" alt="phone">
+        <div class="ms-0" style="margin-right: 100px;">
+            <p>Armored Car<br></p>
+            <p><b>Cash Pick-up</b></p>
+            <ul>
+                <li><span style="display: inline-block;">——— </span> Schedule safe, on-site pick-ups according to<br><span style="opacity: 0;">——— </span> your cash requirement needs</li>
+                <li><span style="display: inline-block;">——— </span> Book off-site pick-ups to your partner<br><span style="opacity: 0;">——— </span> facilities and other vendors</li>
+                <li><span style="display: inline-block;">——— </span> Communicate with your driver (and other<br><span style="opacity: 0;">——— </span> depositors) with in-app messaging</li>
+                <li><span style="display: inline-block;">——— </span> Monitor your cash en route and receive<br><span style="opacity: 0;">——— </span> deposits within one business day</li>
+            </ul>
+        </div>
+        
+    </section>
+</main>
+<main id='about' style="height: 100vh;">
+    
+    <section class="d-flex justify-content-between">
+        
+        <div class="ms-0">
+            <p><b>About us</b></p>
+            <span class="d-block mb-4">We are Staack, and we believe that using duffle bags to facilitate<br> Cannabis banking is a bit outdated.</span>
+            <span class="d-block mb-4">We’re a California & NYC-based FinTech company and we provide<br> mobile banking and payment solutions to the Cannabis Industry.</span>
+            <span class="d-block mb-4">We pride ourselves on financial transparency, secure technology,<br> and compliance for all seed-to-sale transactions in the US. </span>
+        </div>
+        <img class="phone" src="images/7.svg" alt="phone">
+    </section>
+</main>
+<main id='contact' style="height: 100vh;">
+    <section class="d-flex justify-content-center">
+        <div style="margin: 0;" class="d-flex grad flex-row justify-content-between">
+            <div style="margin: 0; padding: 10%;" class="d-flex flex-column justify-content-between align-items-start">
+                
+                <p style="margin: 0; line-height: 1.5;">Download<br>
+                <b style="font-size: 5vh; margin: 0;">our Weed Paper</b></p>
+                <button style="margin: 40px 0; padding: 24px 0; height: 50px; border-radius: 12px; width: 220px; background: white;"><h1 style="margin: -20px 0; padding: 12px; align-items: center; font-family: 'Metropolis Bold', sans-serif; font-size: 2vh;">Download</h1></button>
+                
+            </div>
+            <img style="height: 50vh; margin: 40px; " src="images/bigghost.svg">
+        </div>
+        
+    </section>
+</main>
+<main style="height: 100vh;">
+    
+    <section class="d-flex justify-content-between">
+        
+        <div class="ms-0">
+            <p><b>Staack wouldn't be here<br>
+                without the help of our<br>
+                partners</b></p>
+            <span>Staack helps agile cannabis companies remain competitive through innovative and customer-focused financial products. By combining professional cannabis insight and digital expertise, we’re<br> transforming banking for the cannabis space as we know it.</span>
+            
+        </div>
+        <img class="phone" src="images/8.svg" alt="phone">
+    </section>
+</main>
+<main id="join">
+    <img style="width: 100vw; position: absolute; z-index: -1;" src="images/smoke.svg" alt="smoke">
+    <section class="d-flex justify-content-between">
+        
+        <div style="margin: 0;" class="d-flex grad flex-row justify-content-between">
+            <div style="margin: 0; padding: 10%;" class="d-flex flex-column justify-content-between align-items-start">
+                
+                <p style="font-size: 4vh; line-height: 1.5; margin: -8vh 0 0 0;">Do you know a cannabis business<br>
+                     that could benefit from Staack’s<br>
+                      banking and blockchain solutions?<br><br>
+                <b style=" line-height: 1; font-size: 7vh; margin: 0;">Join the<br>
+                movement!</b></p>
+            </div>
+            <div style="height: 50%; margin: 25vh auto;">
+                <div style="height: auto" class="d-flex flex-row justify-content-center align-items-center">
+                <label style="cursor: pointer; font-family: 'Metropolis Bold'; color: white; width: 50%; margin: 0 0 30px 0; padding: 5px 10px; border-bottom: 2px solid white; text-align: center;">Join
+                
+                </label> 
+                <label style="cursor: pointer; font-family: 'Metropolis Bold'; color: rgba(255,255,255, 0.5);  margin: 0 0 30px 0; padding: 5px 10px; border-bottom: 2px solid rgba(255,255,255,0.5); width: 50%; text-align: center;">Share
+                
+                </label> 
+            </div>
+                <div style="height: auto; margin: 0;" class="input-group">
+                    <span style="margin: 0; background: #222222; border: none;" class="input-group-text"><img class="w-100" src="images/sms.svg"></span>
+                    <input style="margin: 0; padding: 10px; background: #222222; border: none;;" type="email" class="placeholder-bg-white border-0" placeholder="Email">
+                </div>
+                <div style="height: auto; margin: 20px 0;" class="input-group">
+                    <span style="margin: 0; background: #222222; border: none;" class="input-group-text"><img class="w-100" src="images/call.svg"></span>
+                    <input style="margin: 0; padding: 10px; background: #222222; border: none;;" type="email" class="placeholder-bg-white border-0" placeholder="Phone number">
+                </div>
+                <button style="margin: 5px 0; padding: 20px 0; border-radius: 12px; width: 100%; background: white;"><h1 style="margin: -20px 0; padding: 12px; align-items: center; font-family: 'Metropolis Bold', sans-serif; font-size: 2vh;">Join</h1></button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer style="width: 100vw; margin-top: 70vh; height: 50vh; background-color: black; position: relative; bottom: 0;">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div style="text-align: right" class="col-10 text-align-end">
+                <div class="d-flex justify-content-around h-50 mt-5">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#join" class="nav-link">Join Waitlist</a>
+                   <a></a><a></a><a></a><a></a><a></a>
+                    <div style="position: absolute; margin-top: -10vh;" class="d-flex flex-column justify-content-center">
+                    <img style="width: 5vw; margin: auto; margin-bottom: 4vh;" src="images/footghost.svg" alt="Logo">
+                    <img src="images/Staack.svg" alt="Logo">
+                </div>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Terms of Service</a>
+                    <a href="#" class="nav-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div style="margin: auto; width: 140px;" class="row d-flex justify-content-around">
+            <div class="col-12 d-flex justify-content-between" style="margin-top: 15vh;">
+                <a style="cursor: pointer"><img src="images/link.svg" href=# alt="link"></a>
+                <a style="cursor: pointer"><img src="images/inst.svg" alt="link"></a>
+                <a style="cursor: pointer"><img src="images/wha.svg" alt="link"></a>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 text-center">
+                <a href="#" class="social"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </html>
